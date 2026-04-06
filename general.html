@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>General | Realms of Teramiror</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const dropdown = document.querySelector('.lore-dropdown');
+    let hideTimeout;
+
+    if (!dropdown) {
+      console.log('Dropdown not found');
+      return;
+    }
+
+    console.log('Dropdown found');
+
+    dropdown.addEventListener('mouseenter', () => {
+      console.log('enter');
+      clearTimeout(hideTimeout);
+      dropdown.classList.add('show');
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+      console.log('leave');
+      hideTimeout = setTimeout(() => {
+        console.log('hide');
+        dropdown.classList.remove('show');
+      }, 150);
+    });
+  });
+</script>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <h1>Realms of Teramiror - a D&D campaign</h1>
+      <p class="tagline">A place for lore, rules, and everything going on in our campaign.</p>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+
+<div class="dropdown lore-dropdown">
+  <a class="dropbtn">Lore</a>
+
+  <div class="dropdown-content">
+    <a href="general.html">General</a>
+    <a href="factions.html">Current Affairs</a>
+  </div>
+</div>
+
+        <a href="characters.html">Our Heroes</a>
+        <a href="house-rules.html">House Rules</a>
+        <a href="story.html">The Story</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+
+    </section>
+        <div class="image-center">
+            <img src="images/alrais.jpg" alt="Map of Teramiror">
+        </div>
+    <section>
+
+
+    <section class="card">
+      <h2>Astronomy</h2>
+      <h3>The Calendar - Current Year: <strong>2218</strong></h3>
+      <p>
+        A year consist of 250 days of:
+        <ul>
+            <li>Frostdeep (Winter) - 88 days (35% of the year)</li>
+            <li>Bloomtide (Spring) - 37 days (15% of the year)</li>
+            <li>Highsun (Summer) - 88 days (35% of the year)</li>
+            <li>Duskhollow (Autumn) – 37 days (15% of the year)</li>
+        </ul>
+
+        <p>Each "week" (there are 25 weeks in a year) is called a Tenday, like <i>Forgotten Realms</i>:
+        Day the First, Day the Second, and so on. </p>
+        
+        <p>There are two moons, Aelun the male (50 cycle) and Myrielle the female (20 cycle)
+        </p>
+
+      </p>
+
+
+    </section>
+
+    <section class="card">
+      <h2>Races and Classes</h2>
+      <p>
+        Elves, Humans, Dwarves, Halflings, Dragonborn, Gnomes, and Orcs are <i>the most common races</i> spread around Alrais.
+        Tieflings, Aasimar, and Goliath exist too, but are <i>less common</i>
+      </p>
+      <p>
+        The <i>most common classes</i> are Fighters, Rangers, Bards, Barbarians, Clerics, Paladins, Rogues, and Wizards.
+        Druids, Monks, Sorcerers and Warlocks are <i>less common</i> but still found around Alrais.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Religious Orders and other institutions (secret or otherwise)</h2>
+        <p>
+            Most religious orders are for Clerics and Paladins, who follow one or more of the deities' dogmas or philosophies (see the Deity Pantheon, below).
+        <P>
+        <p>
+            While is it "known" that other Orders exists, they are mostly either secret (like Rogues' guilds), irrelevant or ignored.
+        </p>
+    </section>
+
+
+    <section>
+        <section class="card">
+            <h2>Deities of Teramiror</h2>
+          <div class="table-wrap">
+            <table class="lore-table">
+              <thead>
+                <tr>
+                  <th>Deity</th>
+                  <th>Domain (Virtue/Vice)</th>
+                  <th>Cleric Domains</th>
+                  <th>Warlock Patron</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Aliren</td>
+                  <td>Hope</td>
+                  <td>Life, Light</td>
+                  <td>The Celestial</td>
+                </tr>
+                <tr>
+                  <td>Vaelune</td>
+                  <td>Love</td>
+                  <td>Life, Trickery, Peace</td>
+                  <td>The Archfey</td>
+                </tr>
+                <tr>
+                  <td>Thamior</td>
+                  <td>Perseverance</td>
+                  <td>War, Forge, Order</td>
+                  <td>The Undying</td>
+                </tr>
+                <tr>
+                  <td>Eluvis</td>
+                  <td>Faith</td>
+                  <td>Knowledge, Light, Twilight</td>
+                  <td>The Celestial</td>
+                </tr>
+                <tr>
+                  <td>Zareth</td>
+                  <td>Fate / Indifference</td>
+                  <td>Trickery, Knowledge, Grave</td>
+                  <td>The Great Old One</td>
+                </tr>
+                <tr>
+                  <td>Mirella</td>
+                  <td>Mercy</td>
+                  <td>Grave, Twilight, Death</td>
+                  <td>The Undying</td>
+                </tr>
+                <tr>
+                  <td>Neralis</td>
+                  <td>Lust / Desire</td>
+                  <td>Trickery, Tempest, Twilight</td>
+                  <td>The Archfey</td>
+                </tr>
+                <tr>
+                  <td>Vorgral</td>
+                  <td>Greed</td>
+                  <td>Forge, Death, Order</td>
+                  <td>The Fiend</td>
+                </tr>
+                <tr>
+                  <td>Syraeth</td>
+                  <td>Fear / Deception</td>
+                  <td>Trickery, Knowledge</td>
+                  <td>The Great Old One</td>
+                </tr>
+                <tr>
+                  <td>Druvok</td>
+                  <td>Wrath / Control</td>
+                  <td>War, Order, Tempest</td>
+                  <td>The Fiend</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+          </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Campaign reference site</p>
+    </div>
+  </footer>
+
+</body>
+</html>

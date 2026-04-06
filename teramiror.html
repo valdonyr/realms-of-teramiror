@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lore | Realms of Teramiror</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const dropdown = document.querySelector('.lore-dropdown');
+    let hideTimeout;
+
+    if (!dropdown) {
+      console.log('Dropdown not found');
+      return;
+    }
+
+    console.log('Dropdown found');
+
+    dropdown.addEventListener('mouseenter', () => {
+      console.log('enter');
+      clearTimeout(hideTimeout);
+      dropdown.classList.add('show');
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+      console.log('leave');
+      hideTimeout = setTimeout(() => {
+        console.log('hide');
+        dropdown.classList.remove('show');
+      }, 150);
+    });
+  });
+</script>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1>Realms of Teramiror - a D&D campaign</h1>
+    <p class="tagline">Everything about the world of Teramiror</p>
+
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+      
+<div class="dropdown lore-dropdown">
+  <a class="dropbtn">Lore</a>
+
+  <div class="dropdown-content">
+    <a href="general.html">General</a>
+    <a href="factions.html">Current Affairs</a>
+  </div>
+</div>
+      
+        <a href="characters.html">Our Heroes</a>
+        <a href="house-rules.html">House Rules</a>
+        <a href="story.html">The Story</a>
+      </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h2>What everyone knows</h2>
+    <p>
+      Write the general knowledge of the world here.
+      This is what any character would know before the campaign begins.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>The world at a glance</h2>
+    <p>
+      Brief overview of continents, kingdoms, or major regions.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Magic & Religion</h2>
+    <p>
+      How magic works, gods, beliefs, and anything important for players.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Current tensions</h2>
+    <p>
+      Wars, political instability, rumors—anything that sets the stage.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Campaign reference site</p>
+  </div>
+</footer>
+
+</body>
+</html>

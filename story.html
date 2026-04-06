@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Story | Realms of Teramiror</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const dropdown = document.querySelector('.lore-dropdown');
+    let hideTimeout;
+
+    if (!dropdown) {
+      console.log('Dropdown not found');
+      return;
+    }
+
+    console.log('Dropdown found');
+
+    dropdown.addEventListener('mouseenter', () => {
+      console.log('enter');
+      clearTimeout(hideTimeout);
+      dropdown.classList.add('show');
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+      console.log('leave');
+      hideTimeout = setTimeout(() => {
+        console.log('hide');
+        dropdown.classList.remove('show');
+      }, 150);
+    });
+  });
+</script>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1>Realms of Teramiror - a D&D campaign</h1>
+    <p class="tagline">The unfolding story of the campaign</p>
+
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+      
+<div class="dropdown lore-dropdown">
+  <a class="dropbtn">Lore</a>
+
+  <div class="dropdown-content">
+    <a href="general.html">General</a>
+    <a href="factions.html">Current Affairs</a>
+  </div>
+</div>
+      
+        <a href="characters.html">Our Heroes</a>
+        <a href="house-rules.html">House Rules</a>
+        <a href="story.html">The Story</a>
+      </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Intro -->
+  <section class="card">
+    <h2>The Chronicle Begins</h2>
+    <p>
+      This page will record the journey of our adventurers across Teramiror.
+      Each session will be summarized here—capturing key moments, discoveries,
+      and the choices that shape the story.
+    </p>
+  </section>
+
+  <!-- Placeholder Session -->
+  <section class="card">
+    <h2>Session 1 — (Title to be revealed)</h2>
+    <p><strong>Date:</strong> June 2026</p>
+
+    <h3>Summary</h3>
+    <p>
+      The story has yet to begin. This space will soon hold the first steps
+      of the party into the world of Teramiror.
+    </p>
+
+    <h3>Key Events</h3>
+    <ul>
+      <li>—</li>
+      <li>—</li>
+    </ul>
+
+    <h3>Notable NPCs</h3>
+    <ul>
+      <li>—</li>
+    </ul>
+
+    <h3>Loose Threads</h3>
+    <ul>
+      <li>—</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Campaign reference site</p>
+  </div>
+</footer>
+
+</body>
+</html>

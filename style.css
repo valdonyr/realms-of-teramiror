@@ -1,0 +1,326 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Base page */
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  color: #f3eadf;
+  background-color: #15120f;
+  background-image:
+    linear-gradient(rgba(21, 18, 15, 0.82), rgba(21, 18, 15, 0.82)),
+    url("images/mapp2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Layout */
+.container {
+  width: min(900px, 92%);
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(
+    to bottom,
+    rgba(36, 27, 22, 0.96),
+    rgba(24, 19, 16, 0.96)
+  );
+  border-bottom: 1px solid #4a3a2d;
+  padding: 2rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.site-header h1 {
+  margin: 0;
+}
+
+.tagline {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #d8c7b3;
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0;
+  align-items: center;
+}
+
+.main-nav a,
+.dropbtn {
+  display: inline-block;
+  text-decoration: none;
+  color: #f8efe4;
+  background: #3a2b21;
+  padding: 0.6rem 1rem;
+  border: 1px solid #6a5443;
+  border-radius: 8px;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.main-nav a:hover,
+.dropbtn:hover {
+  background: #4a372b;
+}
+
+.main-nav a.active,
+.dropbtn.active {
+  background: #5a4435;
+  border-color: #8a6b55;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  min-width: 180px;
+  padding: 0.3rem 0;
+  background: #2a1f18;
+  border: 1px solid #6a5443;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  z-index: 1100;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: #f8efe4;
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background: #4a372b;
+}
+
+/* Controlled by JavaScript */
+.dropdown.show .dropdown-content {
+  display: block;
+}
+
+/* Main content */
+main {
+  padding: 2rem 0;
+}
+
+/* Cards */
+.card {
+  background: rgba(33, 25, 19, 0.92);
+  border: 1px solid #4f3d31;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.hero h2 {
+  margin-top: 0;
+}
+
+/* Typography */
+h2 {
+  color: #f4d7a1;
+  margin-top: 0;
+}
+
+h3 {
+  color: #e6c891;
+}
+
+p,
+li {
+  color: #f3eadf;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+/* Links inside content */
+main a,
+.card a {
+  color: #f4d7a1;
+}
+
+main a:hover,
+.card a:hover {
+  color: #ffe2ab;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid #4a3a2d;
+  padding: 1rem 0 2rem;
+  color: #c9b7a2;
+  background: rgba(12, 9, 7, 0.35);
+}
+
+/* Tables */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1rem;
+}
+
+.lore-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0;
+  font-size: 0.95rem;
+  background: #d8d2c2;
+  color: #2b2118;
+  border: 1px solid #5a4636;
+  min-width: 640px;
+}
+
+.lore-table th,
+.lore-table td {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #5a4636;
+  vertical-align: top;
+}
+
+.lore-table thead {
+  background: #6b6b6b;
+}
+
+.lore-table th {
+  color: #ffffff;
+  text-align: left;
+}
+
+.lore-table tbody tr:nth-child(even) {
+  background: #cfc8b6;
+}
+
+/* Images */
+.image-center {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.image-center img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #5a4636;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.image-caption {
+  font-size: 0.9rem;
+  color: #c9b7a2;
+  margin-top: 0.5rem;
+}
+
+/* Optional portrait image style */
+.portrait-image img {
+  max-width: 320px;
+  width: 100%;
+}
+
+/* Mobile-friendly improvements */
+@media (max-width: 700px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .container {
+    width: 94%;
+  }
+
+  .site-header {
+    position: static;
+    padding: 1.25rem 0;
+  }
+
+  .site-header h1 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .main-nav {
+    gap: 0.5rem;
+  }
+
+  .main-nav a,
+  .dropbtn {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .dropdown-content {
+    min-width: 160px;
+  }
+
+  main {
+    padding: 1.2rem 0;
+  }
+
+  .card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+  }
+
+  p,
+  li {
+    font-size: 0.98rem;
+  }
+
+  .lore-table {
+    font-size: 0.9rem;
+    min-width: 560px;
+  }
+
+  .lore-table th,
+  .lore-table td {
+    padding: 0.5rem 0.65rem;
+  }
+
+  .image-center img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .portrait-image img {
+    max-width: 100%;
+  }
+}

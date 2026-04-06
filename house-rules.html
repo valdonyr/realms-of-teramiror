@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>House Rules | Realms of Teramiror</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const dropdown = document.querySelector('.lore-dropdown');
+    let hideTimeout;
+
+    if (!dropdown) {
+      console.log('Dropdown not found');
+      return;
+    }
+
+    console.log('Dropdown found');
+
+    dropdown.addEventListener('mouseenter', () => {
+      console.log('enter');
+      clearTimeout(hideTimeout);
+      dropdown.classList.add('show');
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+      console.log('leave');
+      hideTimeout = setTimeout(() => {
+        console.log('hide');
+        dropdown.classList.remove('show');
+      }, 150);
+    });
+  });
+</script>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1>Realms of Teramiror - a D&D campaign</h1>
+    <p class="tagline">House rules and table expectations</p>
+
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+      
+<div class="dropdown lore-dropdown">
+  <a class="dropbtn">Lore</a>
+
+  <div class="dropdown-content">
+    <a href="general.html">General</a>
+    <a href="factions.html">Current Affairs</a>
+  </div>
+</div>
+      
+        <a href="characters.html">Our Heroes</a>
+        <a href="house-rules.html">House Rules</a>
+        <a href="story.html">The Story</a>
+      </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h2>Gameplay Rules</h2>
+    <ul>
+      <li><h4>Critical Hits</h4>
+        <p>Whenever a player lands a natural 20, they get to choose between rolling the usual dice and re-rolling any 1's, once. Or else rolling just one dice (1's ar not re-rolled) while maxing the other one</p>
+      </li>
+      <li><h4>Cantrips and Spells - the Bonus Action</h4>
+        <p>Players can cast two spells in on turn as long as one of them has the Bonus Action tag, without the other one needing to be a Cantrip.</p>
+    </li>
+    <li>
+        <h4>Death Saving Throws</h4>
+        <p>Death Saves are rolled by the player but no one can see the result (not even the said player. Eg, using an "upside-down" non-transparent cup)</p>
+    </li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Table Expectations</h2>
+    <ul>
+      <li>Be on time</li>
+      <li>Respect other players</li>
+      <li>Communicate absences</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Rulings Philosophy</h2>
+    <p>
+      How you handle unclear rules, improvisation, and decisions as DM.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Campaign reference site</p>
+  </div>
+</footer>
+
+</body>
+</html>

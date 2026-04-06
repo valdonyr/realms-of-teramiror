@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Current Affairs | Realms of Teramiror</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const dropdown = document.querySelector('.lore-dropdown');
+    let hideTimeout;
+
+    if (!dropdown) {
+      console.log('Dropdown not found');
+      return;
+    }
+
+    console.log('Dropdown found');
+
+    dropdown.addEventListener('mouseenter', () => {
+      console.log('enter');
+      clearTimeout(hideTimeout);
+      dropdown.classList.add('show');
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+      console.log('leave');
+      hideTimeout = setTimeout(() => {
+        console.log('hide');
+        dropdown.classList.remove('show');
+      }, 150);
+    });
+  });
+</script>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <h1>Realms of Teramiror - a D&D campaign</h1>
+      <p class="tagline">A place for lore, rules, and everything going on in our campaign.</p>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+
+<div class="dropdown lore-dropdown">
+  <a class="dropbtn">Lore</a>
+
+  <div class="dropdown-content">
+    <a href="general.html">General</a>
+    <a href="factions.html">Current Affairs</a>
+  </div>
+</div>
+
+        <a href="characters.html">Our Heroes</a>
+        <a href="house-rules.html">House Rules</a>
+        <a href="story.html">The Story</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+  <section class="card">
+  <h2>Factions of Teramiror</h2>
+  <p>
+    Across Teramiror, alliances form and tensions simmer beneath the surface.
+    While peace still holds, it does so uneasily—whispers of change and
+    uncertainty can be heard in courts, markets, and borderlands alike.
+  </p>
+</section>
+
+<!-- Alberon & Rhuedon -->
+<section class="card">
+  <h2>Alberon & Rhuedon</h2>
+  <p>
+    Alberon and Rhuedon stand aligned in their interests, maintaining a close
+    political and military relationship. Their cooperation has grown steadily
+    over the years, shaping the balance of power across the region.
+  </p>
+  <p>
+    In recent times, their movements have drawn increased attention. Activity
+    along their borders has become more deliberate, and their internal affairs
+    more guarded.
+  </p>
+  <p>
+    Though no open conflict has yet begun, many believe that Alberon and
+    Rhuedon are preparing for something significant—what form that may take,
+    however, remains uncertain.
+  </p>
+</section>
+
+<!-- Faningor & Kalak -->
+<section class="card">
+  <h2>The Great Alliance: Faningor & Kalak</h2>
+  <p>
+    Faningor and Kalak are bound by a long-standing alliance rooted in
+    cooperation and shared interests. Together, they have maintained stability
+    across their territories for many years.
+  </p>
+  <p>
+    Recently, however, both kingdoms have grown increasingly watchful. Subtle
+    changes in the actions of neighboring powers have not gone unnoticed.
+  </p>
+  <p>
+    While no immediate threat has been declared, preparations have quietly
+    begun. Scouts have been sent, defenses reviewed, and communication between
+    the two allies strengthened.
+  </p>
+  <p>
+    There is a growing sense that something may be unfolding beyond what is
+    immediately visible—though its nature remains unclear.
+  </p>
+</section>
+
+<!-- Varnonel -->
+<section class="card">
+  <h2>Varnonel</h2>
+  <p>
+    Varnonel maintains a stance of neutrality in the broader tensions between
+    the great powers. Its position allows it to act as a hub of trade and
+    diplomacy, navigating carefully between competing interests.
+  </p>
+  <p>
+    Its economic strength is bolstered by strong trade relationships,
+    particularly with the Dwarves of the Iron Hills. Together, they sustain a
+    steady flow of goods and resources that benefit both societies.
+  </p>
+  <p>
+    Despite its outward stability, rumours persist of hidden dealings within
+    certain parts of Varnonel—whispers of shadowed markets and discreet
+    exchanges with unknown parties. None of these claims have been confirmed.
+  </p>
+</section>
+
+<!-- Dwarves -->
+<section class="card">
+  <h2>The Dwarves of the Iron Hills</h2>
+  <p>
+    Beneath the Iron Hills lies a vast and enduring dwarven civilization.
+    Renowned for their craftsmanship and resilience, the dwarves have built a
+    society that thrives both independently and through trade.
+  </p>
+  <p>
+    Their connection with Varnonel has brought prosperity to both, allowing for
+    the steady exchange of materials, knowledge, and goods.
+  </p>
+  <p>
+    Though largely focused on their own domains, the dwarves remain aware of
+    the shifting balance of power above—and below.
+  </p>
+</section>
+
+<!-- Drow -->
+<section class="card">
+  <h2>The Drow of the Underdark</h2>
+  <p>
+    Beneath the mountains, deep within the Underdark, dwell the drow—an ever-
+    present and often unseen force in the world.
+  </p>
+  <p>
+    Traditionally confined to the depths, their presence has in recent times
+    become more noticeable. Sightings on the surface, though still rare, have
+    grown more frequent.
+  </p>
+  <p>
+    The reasons for this shift remain unknown. Some believe the drow are
+    responding to changes within the world itself—sensing disturbances long
+    before others become aware of them.
+  </p>
+</section>
+
+<!-- World State -->
+<section class="card">
+  <h2>A World on the Edge</h2>
+  <p>
+    Across Teramiror, subtle changes have begun to emerge. Seasons behave
+    strangely, patterns shift, and the natural order seems—at times—unsteady.
+  </p>
+  <p>
+    Yet for most, these signs are overshadowed by the more immediate concerns
+    of politics and potential conflict.
+  </p>
+  <p>
+    Still, a quiet question lingers:
+    <em>are these events connected—or merely coincidence?</em>
+  </p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Heroes | Realms of Teramiror</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const dropdown = document.querySelector('.lore-dropdown');
+    let hideTimeout;
+
+    if (!dropdown) {
+      console.log('Dropdown not found');
+      return;
+    }
+
+    console.log('Dropdown found');
+
+    dropdown.addEventListener('mouseenter', () => {
+      console.log('enter');
+      clearTimeout(hideTimeout);
+      dropdown.classList.add('show');
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+      console.log('leave');
+      hideTimeout = setTimeout(() => {
+        console.log('hide');
+        dropdown.classList.remove('show');
+      }, 150);
+    });
+  });
+</script>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1>Realms of Teramiror - a D&D campaign</h1>
+    <p class="tagline">Meet the adventuring party</p>
+
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+      
+<div class="dropdown lore-dropdown">
+  <a class="dropbtn">Lore</a>
+
+  <div class="dropdown-content">
+    <a href="general.html">General</a>
+    <a href="factions.html">Current Affairs</a>
+  </div>
+</div>
+      
+        <a href="characters.html">Our Heroes</a>
+        <a href="house-rules.html">House Rules</a>
+        <a href="story.html">The Story</a>
+      </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h2>The Party</h2>
+    <p>
+      A group of adventurers brought together by fate, coin, or something darker.
+    </p>
+  </section>
+
+  <!-- Character 1 -->
+  <section class="card">
+    <h2>Character Name</h2>
+    <p><strong>Race/Class:</strong> Example</p>
+    <p><strong>Player:</strong> Player Name</p>
+    <p>
+      Short description of the character. Personality, vibe, maybe reputation.
+    </p>
+  </section>
+
+  <!-- Duplicate for each character -->
+  
+  <section class="card">
+    <h2>Character Name</h2>
+    <p><strong>Race/Class:</strong> Example</p>
+    <p><strong>Player:</strong> Player Name</p>
+    <p>
+      Short description.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Campaign reference site</p>
+  </div>
+</footer>
+
+</body>
+</html>
