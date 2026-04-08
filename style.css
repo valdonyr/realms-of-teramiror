@@ -244,6 +244,28 @@ main a:hover,
   width: 100%;
 }
 
+/* Side-by-side images */
+.image-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.image-item {
+  flex: 1;
+  text-align: center;
+}
+
+.image-item img {
+  width: 100%;
+  max-width: 260px; /* controls size */
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #5a4636;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
 /* Mobile-friendly improvements */
 @media (max-width: 700px) {
   body {
