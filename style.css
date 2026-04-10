@@ -346,14 +346,19 @@ main a:hover,
     max-width: 100%;
   }
 
-  @media (max-width: 700px) {
+ @media (max-width: 700px) {
   .image-row {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;      /* 👈 keep side-by-side */
+    justify-content: center;
+    gap: 0.8rem;              /* slightly tighter spacing */
   }
 
-  .image-item img {
-    max-width: 100%;
+  .image-item {
+    flex: 1;
+  }
+
+  .image-row .image-item img {
+    max-width: 140px;         /* 👈 controls size */
   }
 }
 }
