@@ -250,6 +250,8 @@ main a:hover,
   gap: 1.5rem;
   margin-top: 1rem;
   justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
 }
 
 .image-item {
@@ -259,7 +261,7 @@ main a:hover,
 
 .image-item img {
   width: 100%;
-  max-width: 260px; /* controls size */
+  max-width: 260px;
   height: auto;
   border-radius: 8px;
   border: 1px solid #5a4636;
@@ -346,19 +348,23 @@ main a:hover,
     max-width: 100%;
   }
 
- @media (max-width: 700px) {
   .image-row {
-    flex-direction: row;      /* 👈 keep side-by-side */
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    gap: 0.8rem;              /* slightly tighter spacing */
+    align-items: flex-start;
+    gap: 0.6rem;
+    flex-wrap: nowrap;
   }
 
-  .image-item {
-    flex: 1;
+  .image-row .image-item {
+    flex: 0 1 48%;
+    text-align: center;
   }
 
   .image-row .image-item img {
-    max-width: 140px;         /* 👈 controls size */
+    width: 100%;
+    max-width: 130px;
+    height: auto;
   }
-}
 }
