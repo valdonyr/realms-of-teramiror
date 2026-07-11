@@ -67,7 +67,9 @@ body {
   padding: 0.6rem 1rem;
   border: 1px solid #6a5443;
   border-radius: 8px;
-  transition: background 0.15s ease, border-color 0.15s ease;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
 }
 
 .main-nav a:hover,
@@ -188,13 +190,13 @@ main a:hover,
 
 .lore-table {
   width: 100%;
+  min-width: 640px;
   border-collapse: collapse;
   margin-top: 0;
   font-size: 0.95rem;
   background: #d8d2c2;
   color: #2b2118;
   border: 1px solid #5a4636;
-  min-width: 640px;
 }
 
 .lore-table th,
@@ -217,7 +219,7 @@ main a:hover,
   background: #cfc8b6;
 }
 
-/* Images */
+/* Centered images */
 .image-center {
   text-align: center;
   margin-top: 1rem;
@@ -233,25 +235,25 @@ main a:hover,
 }
 
 .image-caption {
+  margin-top: 0.5rem;
   font-size: 0.9rem;
   color: #c9b7a2;
-  margin-top: 0.5rem;
 }
 
 /* Optional portrait image style */
 .portrait-image img {
-  max-width: 320px;
   width: 100%;
+  max-width: 320px;
 }
 
 /* Side-by-side images */
 .image-row {
   display: flex;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: nowrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 .image-item {
@@ -266,6 +268,36 @@ main a:hover,
   border-radius: 8px;
   border: 1px solid #5a4636;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* Hero cards */
+.hero-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.hero-image {
+  flex: 0 0 260px;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #5a4636;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.hero-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-info h3 {
+  margin-top: 0;
 }
 
 /* Mobile-friendly improvements */
@@ -289,8 +321,8 @@ main a:hover,
   }
 
   .tagline {
-    font-size: 0.95rem;
     margin-bottom: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .main-nav {
@@ -330,8 +362,8 @@ main a:hover,
   }
 
   .lore-table {
-    font-size: 0.9rem;
     min-width: 560px;
+    font-size: 0.9rem;
   }
 
   .lore-table th,
@@ -348,23 +380,70 @@ main a:hover,
     max-width: 100%;
   }
 
+  /* Keep paired images side by side */
   .image-row {
-    display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
     gap: 0.6rem;
-    flex-wrap: nowrap;
   }
 
   .image-row .image-item {
     flex: 0 1 48%;
-    text-align: center;
   }
 
   .image-row .image-item img {
     width: 100%;
     max-width: 130px;
     height: auto;
+  }
+
+  /* Hero card on mobile */
+  .hero-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .hero-image {
+    flex: 0 0 130px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 130px;
+    height: auto;
+  }
+
+  .hero-info {
+    flex: 1;
+    text-align: left;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 430px) {
+  .main-nav a,
+  .dropbtn {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-card {
+    gap: 0.75rem;
+  }
+
+  .hero-image {
+    flex-basis: 110px;
+  }
+
+  .hero-image img {
+    max-width: 110px;
+  }
+
+  .image-row .image-item img {
+    max-width: 110px;
   }
 }
