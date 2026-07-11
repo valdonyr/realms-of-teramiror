@@ -400,26 +400,32 @@ main a:hover,
   }
 
   /* Hero card on mobile */
+@media (max-width: 700px) {
+
   .hero-card {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 1rem;
   }
 
   .hero-image {
-    flex: 0 0 130px;
+    flex: none;
   }
 
   .hero-image img {
+    max-width: 180px;
     width: 100%;
-    max-width: 130px;
     height: auto;
   }
 
   .hero-info {
-    flex: 1;
+    width: 100%;
     text-align: left;
+  }
+
+  .hero-info h3 {
+    text-align: center;
   }
 }
 
