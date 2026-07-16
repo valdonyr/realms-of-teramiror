@@ -2,160 +2,224 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>The Story | Realms of Teramiror</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="icon" type="image/png" href="images/logotab.png">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/logotab.png" />
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const dropdown = document.querySelector(".lore-dropdown");
+      let hideTimeout;
+
+      if (!dropdown) {
+        return;
+      }
+
+      dropdown.addEventListener("mouseenter", () => {
+        clearTimeout(hideTimeout);
+        dropdown.classList.add("show");
+      });
+
+      dropdown.addEventListener("mouseleave", () => {
+        hideTimeout = setTimeout(() => {
+          dropdown.classList.remove("show");
+        }, 150);
+      });
+    });
+  </script>
 </head>
 
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const dropdown = document.querySelector('.lore-dropdown');
-    let hideTimeout;
-
-    if (!dropdown) {
-      console.log('Dropdown not found');
-      return;
-    }
-
-    console.log('Dropdown found');
-
-    dropdown.addEventListener('mouseenter', () => {
-      console.log('enter');
-      clearTimeout(hideTimeout);
-      dropdown.classList.add('show');
-    });
-
-    dropdown.addEventListener('mouseleave', () => {
-      console.log('leave');
-      hideTimeout = setTimeout(() => {
-        console.log('hide');
-        dropdown.classList.remove('show');
-      }, 150);
-    });
-  });
-</script>
 <body>
 
-<header class="site-header">
-  <div class="container">
-    <h1>Realms of Teramiror - a D&D campaign</h1>
-    <p class="tagline">The unfolding story of the campaign</p>
+  <header class="site-header">
+    <div class="container">
+      <h1>Realms of Teramiror - a D&amp;D campaign</h1>
 
-    <nav class="main-nav">
+      <p class="tagline">The unfolding story of the campaign</p>
+
+      <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
-      
-<div class="dropdown lore-dropdown">
-  <a class="dropbtn">Lore</a>
 
-  <div class="dropdown-content">
-    <a href="general.html">General</a>
-    <a href="factions.html">Current Affairs</a>
-  </div>
-</div>
-      
+        <div class="dropdown lore-dropdown">
+          <a class="dropbtn">Lore</a>
+
+          <div class="dropdown-content">
+            <a href="general.html">General</a>
+            <a href="factions.html">Current Affairs</a>
+          </div>
+        </div>
+
         <a href="characters.html">Our Heroes</a>
         <a href="house-rules.html">House Rules</a>
-        <a href="story.html">The Story</a>
+        <a href="story.html" class="active">The Story</a>
       </nav>
-  </div>
-</header>
+    </div>
+  </header>
 
-<main class="container">
-<section class="card">
-  <h2>The Festival of Bloomtide</h2>
-  <p>
-    As the long chill of Frostdeep draws to an end, the kingdom of Faningor
-    prepares to welcome the season of Bloomtide with celebration.
-  </p>
+  <main class="container">
 
-  <p>
-    By royal decree, <strong>King Arden Vane II</strong> has called for a grand
-    festival in the capital—a five-day gathering of feasting, music, games,
-    and ceremony, open to all citizens of Faningor and those who stand among
-    its allies.
-  </p>
+    <section class="card">
+      <h2>The Festival of Bloomtide</h2>
 
-  <p>
-    Travelers, merchants, nobles, and wanderers alike are expected to arrive
-    from across the realm and beyond. Streets will be adorned, markets will
-    flourish, and the city will come alive in a rare moment of unity and joy.
-  </p>
+      <p>
+        As the long chill of Frostdeep draws to an end, the kingdom of Faningor
+        prepares to welcome the season of Bloomtide with celebration.
+      </p>
 
-  <p>
-    Our heroes, each for their own personal reasons, find themselves drawn to this festival.
-    Whether by invitation, duty, curiosity, or chance, their path leads them to
-    Faningor at the turning of the season.
-  </p>
+      <p>
+        By royal decree, <strong>King Arden Vane II</strong> has called for a grand
+        festival in the capital—a five-day gathering of feasting, music, games,
+        and ceremony, open to all citizens of Faningor and those who stand among
+        its allies.
+      </p>
 
-  <p>
-    Yet beneath the celebration, there lingers a quiet unease.
-  </p>
+      <p>
+        Travelers, merchants, nobles, and wanderers alike are expected to arrive
+        from across the realm and beyond. Streets will be adorned, markets will
+        flourish, and the city will come alive in a rare moment of unity and joy.
+      </p>
 
-  <p>
-    The past year has seen subtle shifts across the lands—movements harder to
-    explain, silences where there once was openness, and a growing sense that
-    something is changing beyond the notice of most.
-  </p>
+      <p>
+        Our heroes, each for their own personal reasons, find themselves drawn to
+        this festival. Whether by invitation, duty, curiosity, or chance, their
+        paths lead them to Faningor at the turning of the season.
+      </p>
 
-  <p>
-    Few speak of it openly. Fewer still understand it.
-  </p>
+      <p>
+        Yet beneath the celebration, there lingers a quiet unease.
+      </p>
 
-  <p>
-    For now, however, the banners are raised, the gates are open, and the
-    festival awaits.
-  </p>
+      <p>
+        The past year has seen subtle shifts across the lands—movements harder to
+        explain, silences where there once was openness, and a growing sense that
+        something is changing beyond the notice of most.
+      </p>
 
-  <p>
-    And so begins our story.
-  </p>
-</section>
-  <!-- Intro
-  <section class="card">
-    <h2>The Chronicle Begins</h2>
-    <p>
-      This page will record the journey of our adventurers across Teramiror.
-      Each session will be summarized here—capturing key moments, discoveries,
-      and the choices that shape the story.
-    </p>
-  </section> -->
+      <p>
+        Few speak of it openly. Fewer still understand it.
+      </p>
 
-  <!-- Placeholder Session -->
-  <section class="card">
-    <h2>Session 1 — [happening Wednesday 15th July] </h2>
-    <!-- <p><strong>Date:</strong> June 2026</p>
+      <p>
+        For now, however, the banners are raised, the gates are open, and the
+        festival awaits.
+      </p>
 
-    <h3>Summary</h3>
-    <p>
-      The story has yet to begin. This space will soon hold the first steps
-      of the party into the world of Teramiror.
-    </p>
+      <p>
+        And so begins our story.
+      </p>
+    </section>
 
-    <h3>Key Events</h3>
-    <ul>
-      <li>—</li>
-      <li>—</li>
-    </ul>
+    <section class="card">
+      <article class="session-summary">
+        <header>
+          <h2>Session 1 – Awakening</h2>
+        </header>
 
-    <h3>Notable NPCs</h3>
-    <ul>
-      <li>—</li>
-    </ul>
+        <p>
+          The story begins not with answers, but with confusion.
+        </p>
 
-    <h3>Loose Threads</h3>
-    <ul>
-      <li>—</li>
-    </ul>
-  </section>
--->
-</main>
+        <p>
+          Our heroes awoke deep within a cave high inside a mountain,
+          battered, exhausted, and with no memory of how they had arrived there.
+          Their names, skills, and companions remained familiar, yet everything
+          that had happened since their first arrival in Faningor seem to have been wiped
+          clean from their minds. Around them lay six strange gemstones, now dull
+          and lifeless, and the remnants of equipment scorched by some immense force.
+        </p>
 
-<footer class="site-footer">
-  <div class="container">
-    <p>The Imagination Table 2026</p>
-  </div>
-</footer>
+        <p>
+          With the mountain trembling around them and the threat of collapse
+          ever-present, the party had little choice but to flee.
+        </p>
+
+        <p>
+          Emerging from the cave, they were met by a sight none of them recognized.
+          Vast forests stretched across the land below, and in the distance a village
+          burned. Drawn by equal parts necessity and curiosity, they descended the
+          mountain and made their way toward the settlement.
+        </p>
+
+        <p>
+          <strong>What they found was devastation.</strong>
+        </p>
+
+        <p>
+          The village had been almost completely destroyed. Homes lay in ruins,
+          fires still smouldered among the wreckage, and the remains of its inhabitants
+          told a grim tale of catastrophe. Searching for supplies and answers, the
+          party instead found themselves facing a new danger as a group of frenzied
+          hill giants descended upon the ruins.
+        </p>
+
+        <p>
+          Outnumbered and pressed on all sides, the heroes fought desperately for
+          survival. As the battle seemed on the verge of overwhelming them, a colossal
+          shadow swept across the land. A deafening roar echoed from above, shaking
+          the earth itself.
+        </p>
+
+        <p>
+          <strong>The giants froze.</strong>
+        </p>
+
+        <p>
+          Then, gripped by fear, they fled.
+        </p>
+
+        <p>
+          Whatever creature had passed overhead was evidently feared even by these
+          savage giants.
+        </p>
+
+        <p>
+          With the immediate danger gone, the party gathered themselves among the
+          ruins and took shelter for the night. Questions far outnumbered answers,
+          and sleep brought little comfort.
+        </p>
+
+        <p>
+          At dawn, they awoke to find a lone stranger watching them from the edge of
+          the settlement. Communication proved impossible; she spoke a language none
+          of the heroes understood. Yet her urgency was unmistakable. Through gestures
+          and determined insistence, she implored the party to follow her.
+        </p>
+
+        <p>
+          With no better lead and nowhere else to turn, the heroes chose to trust the
+          mysterious woman and set off into the wilderness.
+        </p>
+
+        <footer>
+          <p>
+            <em>Their search for answers had only just begun.</em>
+          </p>
+        </footer>
+      </article>
+
+
+      <div class="session-gallery">
+
+        <figure class="gallery-item gallery-item-large">
+          <img
+            src="images/gems.png"
+            alt="Six gemstones lying on an stone altar"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>The Imagination Table 2026</p>
+    </div>
+  </footer>
 
 </body>
 </html>
