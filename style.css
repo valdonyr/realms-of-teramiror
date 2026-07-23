@@ -53,18 +53,18 @@ body {
 .main-nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.75rem;
   margin-top: 0;
-  align-items: center;
 }
 
 .main-nav a,
 .dropbtn {
   display: inline-block;
-  text-decoration: none;
-  color: #f8efe4;
-  background: #3a2b21;
   padding: 0.6rem 1rem;
+  color: #f8efe4;
+  text-decoration: none;
+  background: #3a2b21;
   border: 1px solid #6a5443;
   border-radius: 8px;
   transition:
@@ -94,13 +94,13 @@ body {
   position: absolute;
   top: calc(100% + 0.35rem);
   left: 0;
+  z-index: 1100;
   min-width: 180px;
   padding: 0.3rem 0;
   background: #2a1f18;
   border: 1px solid #6a5443;
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  z-index: 1100;
 }
 
 .dropdown-content a {
@@ -108,10 +108,10 @@ body {
   padding: 0.6rem 1rem;
   color: #f8efe4;
   text-decoration: none;
+  white-space: nowrap;
   background: transparent;
   border: 0;
   border-radius: 0;
-  white-space: nowrap;
 }
 
 .dropdown-content a:hover {
@@ -130,11 +130,11 @@ main {
 
 /* Cards */
 .card {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
   background: rgba(33, 25, 19, 0.92);
   border: 1px solid #4f3d31;
   border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
@@ -144,8 +144,8 @@ main {
 
 /* Typography */
 h2 {
-  color: #f4d7a1;
   margin-top: 0;
+  color: #f4d7a1;
 }
 
 h3 {
@@ -172,38 +172,45 @@ main a:hover,
   color: #ffe2ab;
 }
 
+/* Horizontal separator */
+hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid #4f3d31;
+}
+
 /* Footer */
 .site-footer {
-  border-top: 1px solid #4a3a2d;
   padding: 1rem 0 2rem;
   color: #c9b7a2;
   background: rgba(12, 9, 7, 0.35);
+  border-top: 1px solid #4a3a2d;
 }
 
 /* Tables */
 .table-wrap {
   width: 100%;
+  margin-top: 1rem;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  margin-top: 1rem;
 }
 
 .lore-table {
   width: 100%;
   min-width: 640px;
-  border-collapse: collapse;
   margin-top: 0;
   font-size: 0.95rem;
-  background: #d8d2c2;
   color: #2b2118;
+  background: #d8d2c2;
   border: 1px solid #5a4636;
+  border-collapse: collapse;
 }
 
 .lore-table th,
 .lore-table td {
   padding: 0.6rem 0.8rem;
-  border: 1px solid #5a4636;
   vertical-align: top;
+  border: 1px solid #5a4636;
 }
 
 .lore-table thead {
@@ -221,22 +228,23 @@ main a:hover,
 
 /* Centered images */
 .image-center {
-  text-align: center;
   margin-top: 1rem;
+  text-align: center;
 }
 
 .image-center img {
   display: inline-block;
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
   border: 1px solid #5a4636;
+  border-radius: 8px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
 .image-caption {
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 0;
   font-size: 0.9rem;
+  line-height: 1.4;
   color: #c9b7a2;
 }
 
@@ -246,10 +254,10 @@ main a:hover,
   max-width: 320px;
 }
 
-/* Side-by-side images */
+/* Image rows: banners and NPC portraits */
 .image-row {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   gap: 1.5rem;
@@ -257,16 +265,19 @@ main a:hover,
 }
 
 .image-item {
-  flex: 1;
+  flex: 0 1 260px;
+  max-width: 260px;
   text-align: center;
 }
 
 .image-item img {
+  display: block;
   width: 100%;
   max-width: 260px;
   height: auto;
-  border-radius: 8px;
+  margin: 0 auto;
   border: 1px solid #5a4636;
+  border-radius: 8px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
@@ -286,8 +297,8 @@ main a:hover,
   width: 100%;
   max-width: 260px;
   height: auto;
-  border-radius: 8px;
   border: 1px solid #5a4636;
+  border-radius: 8px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
@@ -314,9 +325,9 @@ main a:hover,
   grid-row: span 1;
   margin: 0;
   overflow: hidden;
+  background: #171310;
   border: 1px solid #5a4636;
   border-radius: 8px;
-  background: #171310;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
@@ -340,8 +351,8 @@ main a:hover,
 }
 
 .gallery-item:hover img {
-  transform: scale(1.03);
   filter: brightness(1.05);
+  transform: scale(1.03);
 }
 
 /* Mobile-friendly improvements */
@@ -424,31 +435,41 @@ main a:hover,
     max-width: 100%;
   }
 
-  /* Keep paired images side by side */
+  /*
+    Two NPC or banner images per mobile row.
+    Each item receives approximately half of the available width.
+  */
   .image-row {
-    flex-direction: row;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 0.6rem;
+    gap: 1rem;
   }
 
   .image-row .image-item {
-    flex: 0 1 48%;
+    flex: 0 1 calc(50% - 0.5rem);
+    max-width: calc(50% - 0.5rem);
   }
 
   .image-row .image-item img {
     width: 100%;
-    max-width: 130px;
+    max-width: 180px;
     height: auto;
+    margin: 0 auto;
   }
 
-  /* Hero card on mobile */
+  .image-row .image-caption {
+    font-size: 0.82rem;
+    line-height: 1.35;
+  }
+
+  /* Hero cards on mobile */
   .hero-card {
     flex-direction: column;
     align-items: center;
-    text-align: center;
     gap: 1rem;
+    text-align: center;
   }
 
   .hero-image {
@@ -501,19 +522,32 @@ main a:hover,
     gap: 0.75rem;
   }
 
-  .hero-image {
-    flex-basis: 110px;
+  .hero-image img {
+    max-width: 165px;
   }
 
-  .hero-image img {
-    max-width: 110px;
+  /*
+    Keep two images per row on smaller phones,
+    but reduce their maximum size slightly.
+  */
+  .image-row {
+    gap: 0.7rem;
+  }
+
+  .image-row .image-item {
+    flex-basis: calc(50% - 0.35rem);
+    max-width: calc(50% - 0.35rem);
   }
 
   .image-row .image-item img {
-    max-width: 110px;
+    max-width: 150px;
   }
 
-  /* Stack the collage on very small screens */
+  .image-row .image-caption {
+    font-size: 0.78rem;
+  }
+
+  /* Stack the separate session collage on very small screens */
   .session-gallery {
     display: block;
   }
