@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+/* Smooth movement when clicking page anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Base page */
 body {
   margin: 0;
@@ -29,13 +34,13 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  padding: 2rem 0;
   background: linear-gradient(
     to bottom,
     rgba(36, 27, 22, 0.96),
     rgba(24, 19, 16, 0.96)
   );
   border-bottom: 1px solid #4a3a2d;
-  padding: 2rem 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
@@ -142,6 +147,15 @@ main {
   margin-top: 0;
 }
 
+/*
+  Prevent linked session sections from being hidden
+  behind the sticky website header.
+*/
+.session-section,
+section[id] {
+  scroll-margin-top: 220px;
+}
+
 /* Typography */
 h2 {
   margin-top: 0;
@@ -177,6 +191,37 @@ hr {
   margin: 2rem 0;
   border: 0;
   border-top: 1px solid #4f3d31;
+}
+
+/* Session index */
+.session-menu {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.session-menu li {
+  margin-bottom: 0.6rem;
+}
+
+.session-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.session-menu a {
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+
+.session-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Back to session index link */
+.back-to-top {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  text-align: right;
 }
 
 /* Footer */
@@ -403,6 +448,15 @@ hr {
     margin-bottom: 1rem;
   }
 
+  /*
+    The header is not sticky on mobile,
+    so only a small anchor gap is needed.
+  */
+  .session-section,
+  section[id] {
+    scroll-margin-top: 20px;
+  }
+
   h2 {
     font-size: 1.3rem;
   }
@@ -414,6 +468,10 @@ hr {
   p,
   li {
     font-size: 0.98rem;
+  }
+
+  .session-menu a {
+    font-size: 1rem;
   }
 
   .lore-table {
@@ -435,10 +493,7 @@ hr {
     max-width: 100%;
   }
 
-  /*
-    Two NPC or banner images per mobile row.
-    Each item receives approximately half of the available width.
-  */
+  /* Two NPC or banner images per mobile row */
   .image-row {
     display: flex;
     flex-flow: row wrap;
@@ -526,10 +581,7 @@ hr {
     max-width: 165px;
   }
 
-  /*
-    Keep two images per row on smaller phones,
-    but reduce their maximum size slightly.
-  */
+  /* Keep two images per row on smaller phones */
   .image-row {
     gap: 0.7rem;
   }
@@ -547,7 +599,7 @@ hr {
     font-size: 0.78rem;
   }
 
-  /* Stack the separate session collage on very small screens */
+  /* Stack the session collage on very small screens */
   .session-gallery {
     display: block;
   }
